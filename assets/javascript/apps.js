@@ -10,16 +10,18 @@
 	- Call a function to read in question and output them to screen
 */
 function loadQuestions(){
-	document.getElementById("questions).innerHTML="<h1>"+ question1 + question2 + question3 + question4 
-} // ???? IS THIS CORRECT SYNTAX I THINK IM MISSING SOMETHING
-var question1 = ["A","B","C","D"]; <!--HOW DO YOU ADD VALUE TO THE VARIALBE AND STRINGS, can you do that?-->
+	document.getElementById("questions").innerHTML="<h1>"+ question1 + question2 + question3 + question4
+} // 
+
+// MAKE arrays with question answer properties, assign it in the correct answer property
+var question1 = ["A","B","C","D"]; <!--HOW DO YOU ADD VALUE TO THE VARIABLE AND STRINGS, can you do that?-->
 var length = question1.length
 console.log(length);
 // if click on B, increment correct answer by 1 else if click on A,C,D increment wrong answer by1
 
-for (var i=0; i<question1.length; i+=+){
+// for (var i=0; i < question1.length; i+=+){
 	console.log(question1[i]);
-}
+	}
 var question2 = ["A","B","C","D"];
 var length = question1.length
 console.log(length);
@@ -42,7 +44,7 @@ for (var i=0; i<question3.length; i+=+){
 	- 3 different types of buttons
 		- start button
 		- multiple choice answers buttons, 12 total>
-		- done button
+		- done button is responsible for checking correct answers. How do we do this?
 - JQUERY
 	- select a multiple choice per question x3 or x12 buttons?
 		-make on click button, do I make 4 buttons for each question 
@@ -58,7 +60,6 @@ console.log(this);
 - TIMERS
 	-setIntervalMethod x
 	-setTimeOutMethod, when do you use this?
-	- do we need laps?
 	- create countdown timer x
 	THE TIMER
 Our stopwatch object */
@@ -67,7 +68,6 @@ var stopwatch = {
 	lap: 1,
 	reset: function () {
 		stopwatch.time = 0;
-		stopwatch.lap = 1;
 	},
 	start: function(){
 	//DONE: use setInterval to start the count here and set the clock to running.
