@@ -1,41 +1,46 @@
 /* TO DO LIST
 - HTML
-	-div multiple choice q buttons
-		each has a name,id,value
-	- write down multiple choice questions in body
+	-div multiple choice q buttons x
+		each has a name,id,value x
+	-How do I add the question? is this in javascript? how??
+	
 - JAVASCRIPT
 	- Write 3 multiple choice questions x
 		-Create a function to load all questions x
 		-Do I have to create 3 arrays with 4 string for the 3 questions? Do I need to loop and do if else statements?
 	- Call a function to read in question and output them to screen
 */
+var image = document.getElementById("image");
+var text ="<h1> Roaring '20s Basic Trivia</h1>"
+var div1=
+
 function loadQuestions(){
-	document.getElementById("questions").innerHTML="<h1>"+ question1 + question2 + question3 + question4
+	document.getElementById("questions").innerHTML="<h1>"
 } // 
 
 // MAKE arrays with question answer properties, assign it in the correct answer property
-var question1 = ["A","B","C","D"]; <!--HOW DO YOU ADD VALUE TO THE VARIABLE AND STRINGS, can you do that?-->
+var question1 = ["A","B",]; <!--HOW DO YOU ADD VALUE TO THE VARIABLE AND STRINGS, can you do that?-->
 var length = question1.length
 console.log(length);
 // if click on B, increment correct answer by 1 else if click on A,C,D increment wrong answer by1
 
-// for (var i=0; i < question1.length; i+=+){
+for (var i=0; i < question1.length; i++){
 	console.log(question1[i]);
 	}
-var question2 = ["A","B","C","D"];
+var question2 = ["A","B",];
 var length = question1.length
 console.log(length);
 // if click on D, increment correct answer by 1 else if click on A,B,C, increment wrong answer by1
 
-for (var i=0; i<question2.length; i+=+){
+for (var i=0; i<question2.length; i++){
 	console.log(question2[i]);
 }
 
-var question3 = ["A","B","C","D"]; 
+var question3 = ["A","B",]; 
 var length = question3.length
 console.log(length);
 
-for (var i=0; i<question3.length; i+=+){
+for (var i=0; i<question3.length; i++){
 	console.log(question3[i]);
 }
 // if click on A, increment correct answer by 1 else if click on B,C,D increment wrong answer by1
@@ -46,18 +51,17 @@ for (var i=0; i<question3.length; i+=+){
 		- multiple choice answers buttons, 12 total>
 		- done button is responsible for checking correct answers. How do we do this?
 - JQUERY
-	- select a multiple choice per question x3 or x12 buttons?
-		-make on click button, do I make 4 buttons for each question 
-		 or is there a way to loop this?
+	- select a multiple choice per question ?
+		-make on click button for the radio buttons?
 	JQuery Button Function */
-#$("#button").on("click", function ()){
+$("#start-button").on("click", function (){
 	console.log(button);
 });
 // JQuery object for button
 console.log(this);
-});
+
 		
-- TIMERS
+/* - TIMERS
 	-setIntervalMethod x
 	-setTimeOutMethod, when do you use this?
 	- create countdown timer x
@@ -65,7 +69,6 @@ console.log(this);
 Our stopwatch object */
 var stopwatch = {
 	time:0,
-	lap: 1,
 	reset: function () {
 		stopwatch.time = 0;
 	},
@@ -74,15 +77,17 @@ var stopwatch = {
 	if (!clockRunning) {
 		intervalId = setInterval(stopwatch.count, 1000);
 		clockRunning = true
+		}
 	},
 	stop: function (){
 		//use clearInterval to stop the count here
 	},
 	recordLap: function() {
-	var converted = stopwatch.timeConverter(stopwatch.time);
-	console.log(converted);
-	// use this variable to show the converted time
-	$("#display").text(converted);
+		var converted = stopwatch.timeConverter(stopwatch.time);
+		console.log(converted);
+		// use this variable to show the converted time
+		$("#display").text(converted);
+	},
 
 	timeConverter: function(t){
 		var minutes = Math.floor(t/60);
@@ -108,5 +113,5 @@ var stopwatch = {
 	without making an alert??
 	- what is document.getElementById?
 	- How is dom manipulated to different layout structure through out game
-	 ie. start button, countdown timer with questions, results page?
+	 ie. start button, countdown timer with questions, results page? */
 

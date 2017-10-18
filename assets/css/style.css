@@ -1,0 +1,30 @@
+body {
+	font-size: 30px;
+}
+
+#div1 {
+	color:white;
+	text-align: left;
+	position: relative;
+}
+
+#display {
+
+}
+
+#time-left {
+
+}
+
+#start-button {
+	background-color: black;
+	color: white;
+}
+
+#questions {
+
+}
+
+#done-button{
+
+}
