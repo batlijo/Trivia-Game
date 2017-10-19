@@ -1,14 +1,24 @@
 body {
-	font-size: 30px;
+	font-family: 'Fascinate Inline';
+	background-image: url("../images/1920s.jpg");
+	background-size:cover;
+	color: white;
+	
 }
 
 #div1 {
-	color:white;
-	text-align: left;
-	position: relative;
+	font-size: 70px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	float: center
+	box-sizing: border-box;
+
 }
 
 #display {
+	font-size: 50px;
 
 }
 
@@ -17,14 +27,35 @@ body {
 }
 
 #start-button {
+	postion: absolute;
+	top: 80px;
+	right: 0;
+	width: 200px;
+	height: 100px;
+	border: 3px solid #white;
+	float: center;
 	background-color: black;
-	color: white;
+	position: relative;
+	font-size: 50px;
 }
 
 #questions {
+	font-size: 25px;
+	
 
 }
 
 #done-button{
-
+	postion: absolute;
+	top: 80px;
+	right: 0;
+	width: 200px;
+	height: 100px;
+	border: 3px solid #white;
+	float: bottom;
+	background-color: black;
+	color: white;
+	position: relative;
+	font-size: 50px;
+	
 }
