@@ -3,9 +3,11 @@ var image = document.getElementById("image");
 var text ="<h1> Roaring '20s Basic Trivia</h1>";
 var div1=
 
-function loadQuestions(){
+
+function loadQuestions(quiz){
 	var radioButton;
-	document.getElementById("questions").innerHTML="";
+	document.getElementById("quiz").innerHTML="";
+	console.log(radioButton);
 	for(var i =0; i < quiz[currentQuestion]["choices"].length; i++){
 		radioButton = document.createElement("input");
 		radioButton.type = "radio";
@@ -18,9 +20,9 @@ function loadQuestions(){
 	radioButton.value = quiz[currentQuestion]["choices"][i];
 	}
 } 
-console.log(loadQuestions);
+//console.log(loadQuestions);
 
-var questions = [
+var quiz = [
 	{
 		question1: "The Great Gatsby is a novel from what year?",
 		answer1: "1925",
@@ -39,15 +41,15 @@ var questions = [
 		answer2: "prohibition era",
 		answer3: "the decade of oh lala."
 	},
-console.log(questions)
+
 ];
 
 $('#start-button').on('click', function(){
-	for(let i = 0; i < questions.length;i++){
-		var $question = $("<input type='radio' name='separate_name' value='someValue'>" + questions[i].question1 + "</input>")
-		var $answers = $("<h4>" + questions[i].answer1 + "</h4>");
-		$("#questions").append($question);
-		$("#questions").append($answers);
+	for(let i = 0; i < quiz.length;i++){
+		var question = $("<input type='radio' name='separate_name' value='someValue'>" + quiz[i] + "</input>")
+		var answers = $("<h3>" + quiz[i] + "</h3>");
+		$("#quiz").append($question);
+		$("#quiz").append($answers);
 		console.log(start-button);
 
 		// <input type="radio" name="gender" value="male"> Male<br>
@@ -71,17 +73,35 @@ $('#done-button').on('click', function(){
 	})
 });
 
-// TIMERS
-$("#display").text("00:00");
-// $("#display").text(converted);
+var count = 60, timer = setInterval(function () {
+    $(".display").html(count--);
+    if (count === 0) clearInterval(timer);
+        }, 1000);
 
-setTimeOut(timeUp, 1000);
-var limit = 1000;
+/* TIMERS
+
+function startTime(duration, display) {
+	var timer = duration, minutes, seconds;
+	setInterval(function () {
+		minutes = parseInt(timer / 60, 10);
+		seconds = parseInt(timer % 60, 10);
+		$(".display").text(timer)
+	})
+}
+
+
+
+
+$("#display").text(converted);
+ var setTimeout = 0;
+
+ var limit = 1000;
 var intervals = 0;
 var totalTime = new Date ();
 var startTime = new Date ();
 
- var stopwatch = {
+
+var stopwatch = {
 	time:0,
  	reset: function () {
  		stopwatch.time = 0;
@@ -97,7 +117,7 @@ var startTime = new Date ();
 };
 
 
-/* 
+
 function run() {
 	intervalId = setInterval(decrement, 1000);
 

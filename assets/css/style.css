@@ -7,8 +7,9 @@ body {
 }
 
 #div1 {
+	padding-top:180px;
 	font-size: 70px;
-	text-align: top;
+	text-align: center;
 	float: center
 	box-sizing: border-box;
 
@@ -35,8 +36,8 @@ body {
 	font-size: 50px;
 }
 
-#questions {
-	font-size: 25px;
+#quiz {
+	color: white;
 	
 
 }
