@@ -15,12 +15,12 @@ body {
 
 }
 
-#display {
+#timer {
 	color:white;
-}
-
-#time-left {
-
+	padding-top: 20px;
+	float: center;
+	text-align: center;
+	font-size: 100px;
 }
 
 #start-button {
@@ -38,6 +38,9 @@ body {
 
 #quiz {
 	color: white;
+	display: block;
+	margin-top: 15px
+	font-size: 20px;
 	
 
 }
@@ -55,4 +58,8 @@ body {
 	position: relative;
 	font-size: 50px;
 	
+}
+
+#results{
+	font-size:20px;
 }
